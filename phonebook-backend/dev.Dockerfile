@@ -1,13 +1,13 @@
 FROM node:20
-  
+
 WORKDIR /usr/src/app
 
-COPY --chown=node:node . .
+COPY package*.json ./
+RUN npm install
 
-RUN npm ci 
+COPY . .
 
-ENV DEBUG=playground:*
-  
-USER node
 
-CMD npm start
+RUN npm install -g nodemon
+
+CMD ["nodemon", "index.js"]

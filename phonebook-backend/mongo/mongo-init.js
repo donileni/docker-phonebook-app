@@ -12,4 +12,4 @@ db.createUser({
 db.createCollection("people");
 
 db.people.insert({ name: "David Olsson", number: "111-231123123" });
-db.people.insert({ text: "Anton Glödman", number: "111-231123124" });
+db.people.insert({ name: "Anton Glödman", number: "111-231123124" });
